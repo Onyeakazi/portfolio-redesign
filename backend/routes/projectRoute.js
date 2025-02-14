@@ -5,6 +5,10 @@ const multer = require('multer');
 const fs = require("fs");
 const path = require("path");
 
+router.get("/", (req, res) => {
+    res.send("API is working!");
+});
+
 router.get("/projects", async (req, res) => {
     try{
         const projects = await Projects.find();
