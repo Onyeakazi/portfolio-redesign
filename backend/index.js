@@ -43,9 +43,8 @@ app.set("views", path.join(__dirname, "views"));
 // Routes
 app.use('/api/', projectRoutes);
 
-// Define a default route
 app.get("/", (req, res) => {
-    res.render("index", { title: "Home" });
+    res.json("API is working!");
 });
 
 const PORT = process.env.PORT || 5000;
